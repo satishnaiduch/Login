@@ -9,8 +9,13 @@ public class LoginTest {
 
 	 @Test
 	    public void loginTest() {
+		 ChromeOptions options = new ChromeOptions();
+		 options.addArguments("--headless");
+		 options.addArguments("--no-sandbox");
+		 options.addArguments("--disable-dev-shm-usage");
 
-	        WebDriver driver = new ChromeDriver();
+		 WebDriver driver = new ChromeDriver(options);
+	        //WebDriver driver = new ChromeDriver();
 
 	        driver.get("https://the-internet.herokuapp.com/login");
 
