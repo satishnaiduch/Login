@@ -18,12 +18,10 @@ public class LoginTest {
 
 	        WebDriver driver = new ChromeDriver(options);
 
-	        driver.get("https://example.com/login");
-
-	        driver.findElement(By.id("username")).sendKeys("testuser");
-	        driver.findElement(By.id("password")).sendKeys("test123");
-	        driver.findElement(By.id("loginBtn")).click();
-
+	       driver.get("https://the-internet.herokuapp.com/login");
+           driver.findElement(By.id("username")).sendKeys("tomsmith");
+           driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
+           driver.findElement(By.cssSelector("button[type='submit']")).click();
 	        driver.quit();
 	    }
 }
